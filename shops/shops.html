@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Shops</title>
+    </head>
+
+    <body>
+        <div class="nav">
+            <a href="../index.html">HOME</a>
+            <a href="../about/about.html">ABOUT US</a>
+            <a href="../map.html">MAP</a>
+        </div>
+        <br>
+        <br>
+        
+        
+        <button class="tablink" onclick="openPage('electronics', this, 'red')">Electronics</button>
+        <button class="tablink" onclick="openPage('apparel', this, 'green')" id="defaultOpen">Apparel</button>
+        <button class="tablink" onclick="openPage('food', this, 'blue')">Food</button>
+        <button class="tablink" onclick="openPage('furniture', this, 'orange')">Furniture</button>
+
+        <div id="electronics" class="tabcontent">
+           <a href="game.html"><h3>Game</h3>
+            <p><img src="images/game.jpg"></p></a>
+
+            <a href="cash-crusaders.html"> <h3>Cash Crusaders</h3>
+            <p><img src="images/cash.png"></p></a>
+
+           <a href="ic.html"><h3>incredible Connections</h3>
+            <p><img src="images/incredible.jpg"></p></a>
+        </div>
+
+        <div id="apparel" class="tabcontent">
+           <a href="nike.html"> <h3>Nike</h3>
+            <p><img src="images/nike.jpg"></p></a>
+            
+           <a href="jet.html"><h3>Jet</h3>
+            <p><img src="images/jet.jpg"></p></a>
+
+           <a href="pep.html"> <h3>Pep</h3>
+            <p><img src="images/pep.jpg"></p></a>
+        </div>
+
+        <div id="food" class="tabcontent">
+            <a href="shoprite.html"> <h3>Shoprite</h3>
+            <p><img src="images/shoprite.png"></p></a>
+
+           <a href="checkers.html"> <h3>Checkers</h3>
+            <p><img src="images/checkers.png"></p></a>
+
+        </div>
+
+        <div id="furniture" class="tabcontent">
+           <a href="lewis.html"> <h3>Lewis</h3>
+            <p><img src="images/lewis.png"></p></a>
+
+           <a href="rochester.html"> <h3>Rochester</h3>
+            <p><img src="images/rochester.jpg"></p> </a>
+        </div>
+
+        <div class="tabs-bottom">
+            <a href="#">SHOPS</a>
+            <a href="../movies/movies.html">MOVIES</a>
+            <a href="../contact.html">CONTACT</a>
+        </div>
+
+        <script>
+            function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+        </script>
+
+    </body>
+</html>
